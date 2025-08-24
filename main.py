@@ -4,6 +4,7 @@ import logging
 from dotenv import load_dotenv
 import os
 import requests
+import webserver
 
 load_dotenv()
 
@@ -55,5 +56,5 @@ async def generatebullshit(interaction):
 
 
 
-
+webserver.keep_alive()
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
